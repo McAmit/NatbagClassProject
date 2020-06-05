@@ -1,5 +1,18 @@
 package amitMaimon315855478;
 
-public class ControlRoom {
+import java.util.ArrayList;
+import java.util.Scanner;
 
+public class ControlRoom {
+	ArrayList<Arrival> arrivals;
+	ArrayList<Departure> departures;
+	
+
+	
+	
+	public ControlRoom() {
+		
+	}
+	
+	
 }
