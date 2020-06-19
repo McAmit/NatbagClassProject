@@ -6,7 +6,10 @@ public class Departure extends Flight {
 
 	public Departure(String company, String city, DateAndTime date, String flightTime, String flightNum, int terminal,
 			int eta) throws UserExceptions {
-		super(company, city, date, flightTime, flightNum, terminal, eta);
+		super(company, city, date, flightNum, terminal, eta);
+	}
+	public Departure(Flight fly) throws UserExceptions {
+		super(fly);
 	}
 
 	public String toString() {

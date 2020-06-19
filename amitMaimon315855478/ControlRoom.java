@@ -11,7 +11,18 @@ public class ControlRoom {
 	
 	
 	public ControlRoom() {
+		arrivals = new ArrayList<Arrival>();
+		departures=new ArrayList<Departure>();
 		
+	}
+	
+	public boolean addArrival(Arrival arvl) {
+		arrivals.add(arvl);
+		return true;
+	}
+	public boolean addDeparture(Departure dep) {
+		departures.add(dep);
+		return true;
 	}
 	
 	
