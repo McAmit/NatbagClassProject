@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.lang.System;
 
 import org.junit.Test;
 
@@ -50,14 +51,14 @@ public class Program {
 			boolean didHeExited=false;
 			while (!didHeExited) {
 				choice=scan.nextInt();
-				SwitchMenu(choice, ctrl, scan,didHeExited);
+				SwitchMenu(choice, ctrl, scan);
 				showMenu();
 			}
 		}
 		
 	}
 
-	private static void SwitchMenu(int choice, ControlRoom ctrl, Scanner scan,boolean didHeExited) throws UserExceptions {
+	private static void SwitchMenu(int choice, ControlRoom ctrl, Scanner scan) throws UserExceptions {
 		switch (choice) {
 		case ADD_ARRIVAL:
 			
@@ -99,7 +100,7 @@ public class Program {
 			
 			break;
 		case EXIT_MENU:
-			didHeExited=true;
+			System.exit(0);
 		default:
 			break;
 		}
@@ -146,7 +147,7 @@ public class Program {
 		System.out.println("10-> to Search Departures By both City and Date <-");
 		System.out.println("11-> to Save(write) all flights to txt file <-");
 		System.out.println("12-> to load all flights from the file <-");
-		System.out.println("*Any other key to Exit*");
+		System.out.println("*Press 15 to Exit*");
 	}
 	private static void searchArByCity(Scanner scan,ControlRoom ctrl) {
 		System.out.println("Enter A City name to search Arrivals with");
