@@ -6,9 +6,7 @@ import java.util.Scanner;
 
 public class Flight implements Comparable<Flight> {
 
-	//public static enum eInput {succeded,wrongDateInput,flightOnList,wrongTimeInput,wrongCityInput, wrongCompanyInput, wrongGate};
 	public static enum eStatus {OnTime,Canceled,Delayed};
-//	protected eInput input;
 	protected eStatus status;
 	protected String company,type;
 	protected String city;
@@ -36,6 +34,7 @@ public class Flight implements Comparable<Flight> {
 		this.flightNum=strArr[3];
 		this.terminal=Integer.parseInt(strArr[4]);
 		this.eta=Double.parseDouble(strArr[5]);
+		status=eStatus.OnTime;
 	}
 	public void save(PrintWriter pw) {
 		pw.print(city+ ", ");
